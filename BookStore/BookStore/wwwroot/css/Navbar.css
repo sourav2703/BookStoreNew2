@@ -1,0 +1,74 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+body {
+    font-family: 'Roboto Slab', serif;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    padding: 0 0 0 10%;
+    border: 1px solid rebeccapurple;
+    flex-direction: row;
+    background-color: rgb(223, 235, 247);
+}
+
+.left_side {
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+}
+
+    .left_side p {
+        margin: 0;
+    }
+
+    .left_side :hover {
+        color: rgb(239, 3, 3);
+    }
+
+.right_side {
+    width: 40%;
+    /* background-color: rgb(216, 224, 232); */
+    /* display: block; */
+    margin: auto;
+}
+
+.login_btn, .register_btn {
+    float: right;
+    margin: 0 3px;
+    color: white;
+}
+
+.login_And_Reg_btn {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #6b6d73;
+    border-color: transparent;
+    border-radius: 5px;
+    color: white;
+}
+
+    .login_And_Reg_btn:hover {
+        background-color: #d0d4df;
+        color: rgb(230, 30, 30);
+    }
+
+.left_side a {
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+
+.logo p .design {
+    background-color: rgb(52, 54, 54);
+    padding: 10px;
+    border-radius: 50%;
+    color: white;
+}
+
+.logo {
+    display: flex;
+}

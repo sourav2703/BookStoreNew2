@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>h</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+    <link href="~/css/Navbar.css" rel="stylesheet" />
+
+
+</head>
+<body>
+    <div class="navbar">
+        <div class="left_side">
+            <div class="logo">
+                <p> <a href="/" class="design">S</a> </p>
+                <p> <a href="/">Book Store</a> </p>
+            </div>
+            <p> <a href="/">Home</a> </p>
+            <p> <a href="/home/aboutus">About</a> </p>
+            <p> <a href="/home/contactus">Contact</a> </p>
+            <p> <a href="/home/allbooks">Show Books</a> </p>
+
+        </div>
+        <div class="right_side">
+            <div class="login_btn">
+                <button type="submit" class="login_And_Reg_btn">Login</button>
+            </div>
+            <div class="register_btn">
+                <button type="submit" class="login_And_Reg_btn">Register</button>
+
+
+            </div>
+        </div>
+
+
+
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

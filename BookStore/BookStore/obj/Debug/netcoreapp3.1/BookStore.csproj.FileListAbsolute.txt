@@ -386,7 +386,9 @@ E:\DOTNET_FILES_LocalDisk_E\first\BookStore\BookStore\obj\Debug\netcoreapp3.1\Bo
 E:\DOTNET_FILES_LocalDisk_E\first\BookStore\BookStore\obj\Debug\netcoreapp3.1\BookStore.TagHelpers.input.cache
 E:\DOTNET_FILES_LocalDisk_E\first\BookStore\BookStore\obj\Debug\netcoreapp3.1\BookStore.TagHelpers.output.cache
 E:\DOTNET_FILES_LocalDisk_E\first\BookStore\BookStore\obj\Debug\netcoreapp3.1\BookStore.RazorCoreGenerate.cache
-E:\DOTNET_FILES_LocalDisk_E\first\BookStore\BookStore\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 E:\DOTNET_FILES_LocalDisk_E\first\BookStore\BookStore\obj\Debug\netcoreapp3.1\BookStore.RazorTargetAssemblyInfo.cs
 E:\DOTNET_FILES_LocalDisk_E\first\BookStore\BookStore\obj\Debug\netcoreapp3.1\BookStore.Views.pdb
-E:\DOTNET_FILES_LocalDisk_E\first\BookStore\BookStore\obj\Debug\netcoreapp3.1\Razor\Views\Home\GetAllBooks.cshtml.g.cs
+E:\DOTNET_FILES_LocalDisk_E\first\BookStore\BookStore\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+E:\DOTNET_FILES_LocalDisk_E\first\BookStore\BookStore\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+E:\DOTNET_FILES_LocalDisk_E\first\BookStore\BookStore\obj\Debug\netcoreapp3.1\Razor\Views\Home\AllBooks.cshtml.g.cs
+E:\DOTNET_FILES_LocalDisk_E\first\BookStore\BookStore\obj\Debug\netcoreapp3.1\Razor\Views\Home\GetOneBook.cshtml.g.cs
