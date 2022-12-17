@@ -7,8 +7,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
-    <link href="~/css/Navbar.css" rel="stylesheet" />
 
+    <link href="~/css/Navbar.css" rel="stylesheet" />
+    <link href="~/css/StyleSheet.css" rel="stylesheet" />
+    <link href="~/css/footer.css" rel="stylesheet" />
 
 </head>
 <body>
@@ -41,5 +43,9 @@
     <div>
         @RenderBody()
     </div>
+
+    @*.................................FOOTER....................................*@
+    @RenderSection("Footer_Wala" , required:false)
+    
 </body>
 </html>

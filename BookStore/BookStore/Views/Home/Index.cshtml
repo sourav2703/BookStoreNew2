@@ -1,8 +1,16 @@
 ﻿
 @model IEnumerable<BookStore.Models.BookModel>
-@{
-    Layout = "_Layout";
+
+
+@*....Footer veja jaa raha hai Section se Index Page se , Rendersection me Layout page par..........*@
+
+@section Footer_Wala{
+    <footer class="nichewala">
+        <p>This is footer</p>
+    </footer>
 }
+@*........................Section kahi pr v ho skta hai , mayne ye rakhta hai ki rendersection kaha h layout page me.............................................*@
+
 
 <!DOCTYPE html>
 
@@ -27,28 +35,28 @@
         <div class="childcontainer">
             @foreach (var a in Model)
             {
-            <div class="box">
-                <div class="img">
-                    img
+                <div class="box">
+                    <div class="img">
+                        img
+                    </div>
+                    <div class="aboutbox">
+                        @a.Title
+                        @a.Description
+                    </div>
+                    <div class="viewdetails">
+                        <button type="submit" class="view_details_btn">View Details</button>
+                    </div>
+                    <div class="authorname">
+                        <p>@a.Author</p>
+                    </div>
                 </div>
-                <div class="aboutbox">
-                    @a.Title
-                    @a.Description
-                </div>
-                <div class="viewdetails">
-                    <button type="submit" class="view_details_btn">View Details</button>
-                </div>
-                <div class="authorname">
-                    <p>@a.Author</p>
-                </div>
-            </div>
-             }
+            }
 
 
-             
-                
-               
-            
-    </div>
+
+
+
+
+        </div>
 </body>
 </html>

@@ -392,3 +392,6 @@ E:\DOTNET_FILES_LocalDisk_E\first\BookStore\BookStore\obj\Debug\netcoreapp3.1\Ra
 E:\DOTNET_FILES_LocalDisk_E\first\BookStore\BookStore\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 E:\DOTNET_FILES_LocalDisk_E\first\BookStore\BookStore\obj\Debug\netcoreapp3.1\Razor\Views\Home\AllBooks.cshtml.g.cs
 E:\DOTNET_FILES_LocalDisk_E\first\BookStore\BookStore\obj\Debug\netcoreapp3.1\Razor\Views\Home\GetOneBook.cshtml.g.cs
+E:\DOTNET_FILES_LocalDisk_E\first\BookStore\BookStore\obj\Debug\netcoreapp3.1\Razor\Views\Home\AboutUs.cshtml.g.cs
+E:\DOTNET_FILES_LocalDisk_E\first\BookStore\BookStore\obj\Debug\netcoreapp3.1\Razor\Views\Home\ContactUs.cshtml.g.cs
+E:\DOTNET_FILES_LocalDisk_E\first\BookStore\BookStore\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs

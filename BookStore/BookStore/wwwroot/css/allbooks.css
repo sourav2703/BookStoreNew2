@@ -25,6 +25,7 @@ body {
     margin: 10px;
     border: 1px solid rgb(135, 124, 124);
     width: 30%;
+    display:block;
 }
 
 .img {

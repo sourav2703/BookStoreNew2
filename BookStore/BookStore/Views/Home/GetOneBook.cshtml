@@ -1,8 +1,54 @@
 ﻿
-@{
-    
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
+@using BookStore.Models;
+@model BookModel
+
 
 <h1>GetOneBook</h1>
 
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@1,100&display=swap" rel="stylesheet">
+
+    <link href="~/css/OneBookCss.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="Main_container">
+        <div class="container">
+            <div class="child_container1">
+                <div class="box">
+                    <h3>@Model.Title</h3>
+                    <p class="author_class">By:</p> <span>@Model.Author</span>
+                    <p>
+                       @Model.Description
+                    </p>
+                    <a href="" class="Read_Now_btn"><button>Read Now</button></a>
+                </div>
+            </div>
+            <div class="child_container2">
+                <div class="box">
+                    <p class="box_item">Category - @Model.Category</p>
+                    <p class="box_item">Total Page - @Model.PageCount</p>
+                    <p class="box_item">Language - @Model.Language</p>
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+﻿
+/*......................Footer CSS........................*/
+
+.nichewala {
+    background-color: red;
+    display:flex;
+    margin:0;
+    padding:0;
+    justify-content:center;
+}
