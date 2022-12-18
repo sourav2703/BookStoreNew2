@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Dynamic;
 
 namespace BookStore.Controllers
 {
@@ -12,6 +13,26 @@ namespace BookStore.Controllers
     {
         public ViewResult Index()
         {
+            //.................ViewBag.............................
+            dynamic dataa = new ExpandoObject();
+            dataa.id = 1;
+            dataa.name = "Choudhary";
+            ViewBag.data = dataa;
+            ViewBag.Title = "Sourav";
+            ViewBag.obj = new BookModel() { Category = "viewbag_category" , Language="Hindi" };
+            //.....................................................
+
+            //..................ViewData................
+            dynamic d = new ExpandoObject();
+            d.naam = "sourav";
+            d.baapkanaam = "awadhesh";
+            ViewData["Title"] = "Book Store";
+            ViewData["an"] = d;
+            ViewData["Obj"] = new BookModel() { Language = "bhojpuri" };
+
+            //..........................................
+
+
             var data = list();
             return View(data);
         }

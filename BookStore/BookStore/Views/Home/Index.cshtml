@@ -1,6 +1,5 @@
 ﻿
-@model IEnumerable<BookStore.Models.BookModel>
-
+@model IEnumerable<BookModel>
 
 @*....Footer veja jaa raha hai Section se Index Page se , Rendersection me Layout page par..........*@
 
@@ -11,24 +10,40 @@
 }
 @*........................Section kahi pr v ho skta hai , mayne ye rakhta hai ki rendersection kaha h layout page me.............................................*@
 
+@{
+    dynamic data = ViewBag.data;
+}
+@*...................ViewData - Passed Object from viewdata Casting...............................*@
+@{
+    var bookinfo = ViewData["Obj"] as BookModel;
+}
+@{
+    dynamic bb = ViewData["an"];
+}
+
+@*...................Title Sending by ViewData To _Layout File......................*@
+@{ 
+    ViewData["Title"] = "Home";
+}
 
 <!DOCTYPE html>
 
 <html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
-    <link href="~/css/StyleSheet.css" rel="stylesheet" />
 
-
-</head>
 <body>
     <div class="container1">
-        <h1>Welcome to bookstore</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis facere temporibus neque reiciendis excepturi dolorem aspernatur inventore illo dolores, assumenda, reprehenderit similique deleniti, rem quod laudantium! Error quos debitis omnis!</p>
+        <h1>Welcome to bookstore </h1>
+        <p>Viewbag Normal:- Title = @ViewBag.Title</p>
+        <p>Viewbag Passing Anonymous data type :- id:- @data.id ,name:- @data.name </p>
+        <p> ViewBag passing Object:- Language = @ViewBag.obj.Language, Category = @ViewBag.obj.Category</p> <hr />
+        <p> Normal ViewData passing , Title:- @ViewData["Title"]</p>
+        <p> anynomous data passing, Naam:- @bb.naam</p>
+        <p>anynomous data passing,Baap ka naam :- @bb.baapkanaam</p>
+        <p>Object passing Viewdata, Language :- @bookinfo.Language</p>
+
+
+
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis facere temporibus neque reiciendis excepturi dolorem aspernatur inventore illo dolores, assumenda, reprehenderit similique deleniti, rem quod laudantium! Error quos debitis omnis!</p>
         <button type="submit" class="btn">Search Book</button>
     </div>
     <div class="container2">
@@ -58,5 +73,6 @@
 
 
         </div>
+    </div>
 </body>
 </html>
