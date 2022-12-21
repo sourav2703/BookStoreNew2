@@ -1,7 +1,6 @@
-﻿@{
-    ViewData["Title"] = "AllBooks";
-}
-@model IEnumerable<BookModel>
+﻿
+@using BookStore.Data
+@model IEnumerable<books>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,18 +18,18 @@
                     </div>
                     <div class="aboutbox">
                         <p>
-                            @a.Title
-                            @a.Description
+                            Title :- @a.Title
+                            Description :- @a.Description
                         </p>
                     </div>
                     <div class="viewdetails">
 
-                         <a href="/home/getonebook/@a.Id"><button type="submit" class="view_details_btn">View Details</button></a> 
+                         <a asp-controller="home" asp-action="getonebook" asp-route-id="@a.Id"><button type="submit" class="view_details_btn">View Details</button></a> 
 
                     </div>
                     <div class="authorname">
                         <p>
-                            @a.Author
+                           Author :- @a.Author
                         </p>
                     </div>
                 </div>

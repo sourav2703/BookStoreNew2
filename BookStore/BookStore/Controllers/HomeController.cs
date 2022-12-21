@@ -6,13 +6,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Dynamic;
+using BookStore.Data;
+using BookStore.BookRepo;
 
 namespace BookStore.Controllers
 {
     public class HomeController : Controller
     {
+        public readonly BookRepository _bookRepository = null;
+        public HomeController(BookRepository bookRepository)
+        {
+            _bookRepository = bookRepository;
+        }
+
+
+        //.................ViewData Attribute for setting title........................
+        [ViewData]
+        public string Title { get; set; }
+
+        //.................ViewData Attribute for setting title........................
+
         public ViewResult Index()
         {
+            Title ="Home";
             //.................ViewBag.............................
             dynamic dataa = new ExpandoObject();
             dataa.id = 1;
@@ -32,47 +48,68 @@ namespace BookStore.Controllers
 
             //..........................................
 
+            //...................Title.......................//
 
-            var data = list();
+            
+            var data = _bookRepository.Index_Page();
             return View(data);
         }
-        public ViewResult AllBooks()
+        public async Task<ViewResult> AllBooks()
         {
-            var data = list();
-            return View(data);
-
+            var book = await _bookRepository.AllBooks();
+           
+            return View(book);
         }
-        public ViewResult GetOneBook(int id)
+       // [Route("hello")]
+        public IActionResult GetOneBook(int id)
         {
-            var data = getonee(id);
-            return View(data);
+            var a = _bookRepository.getonee(id);
+           
+            //var data = getonee(id);
+            //Title = "AllBooks";
+            return View(a);
+
+
         }
        
+
         public ViewResult AboutUs()
         {
+            Title = "AboutUs";
+
             return View();
         }
         public ViewResult ContactUs()
         {
+            Title = "Contact Us";
+
             return View();
         }
-       
-        private BookModel getonee(int id)
+        public ViewResult AddBooks( bool IsSuccess = false, int ShowingBookByID=0)
         {
-            var a = list();
-           return a.Where(x => x.Id == id).FirstOrDefault();
+            ViewBag.IsSuccess = IsSuccess;
+            ViewBag.ShowingBookByID = ShowingBookByID;
+            Title = "AddBooks";
+            return View();
         }
-        private List<BookModel> list()
+        [HttpPost]
+        public async Task<IActionResult> AddBooks(BookModel bookModels )
         {
-            return new List<BookModel>()
+            int Id= await _bookRepository.AddNewBook(bookModels);
+            //Title = "AddBooks";
+            if (Id > 0)
             {
-                new BookModel(){Id=1,Price=101,Description="This is demo book", Title="Dot Net",Author="Sourav kr",Category="Study",Language="English",PageCount=500},
-                new BookModel(){Id=2,Price=102,Description="This is demo book", Title="MVC",Author="Sourav kr ch",Category="Study",Language="English",PageCount=400},
-                new BookModel(){Id=3,Price=103,Description="This is demo book", Title="Java" ,Author="Sourav kumar",Category="Study",Language="English",PageCount=30},
-                new BookModel(){Id=4,Price=104,Description="This is demo book", Title="c++",Author="Sourav choudhary",Category="Study",Language="English",PageCount=5120}
-            };
-
+                
+                return RedirectToAction(nameof(AddBooks) ,  new { IsSuccess = true, ShowingBookByID = Id } );
+            }
+            return View();
         }
+        //------------------------------------------------------------------------
+
+       
+       
+       
+      
 
 
 

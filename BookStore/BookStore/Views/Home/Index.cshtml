@@ -1,5 +1,6 @@
 ﻿
-@model IEnumerable<BookModel>
+@using BookStore.Data
+@model IEnumerable<books>
 
 @*....Footer veja jaa raha hai Section se Index Page se , Rendersection me Layout page par..........*@
 
@@ -22,9 +23,7 @@
 }
 
 @*...................Title Sending by ViewData To _Layout File......................*@
-@{ 
-    ViewData["Title"] = "Home";
-}
+
 
 <!DOCTYPE html>
 
@@ -59,7 +58,7 @@
                         @a.Description
                     </div>
                     <div class="viewdetails">
-                        <button type="submit" class="view_details_btn">View Details</button>
+                        <a asp-controller="home" asp-action="getonebook" asp-route-id="@a.Id"><button type="submit" class="view_details_btn">View Details</button></a>
                     </div>
                     <div class="authorname">
                         <p>@a.Author</p>
