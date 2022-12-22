@@ -9,14 +9,14 @@ namespace BookStore.Models
 {
     public class BookModel
     {  
-        [Required]
+        [Required(ErrorMessage ="Please Enter Title")]
         public string Title { get; set; }
         public string Description { get; set; }
         public int Price { get; set; }
         public int Id { get; set; }
-        [Required]
+        [Required(ErrorMessage ="Please Enter Author Name")]
         public string Author { get; set; }
-        [Required]
+        [Required(ErrorMessage ="Please Enter Total Page Count")]
         public int PageCount { get; set; }
         public string Language { get; set; }
         public string Category { get; set; }
