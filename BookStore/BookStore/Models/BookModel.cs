@@ -19,6 +19,7 @@ namespace BookStore.Models
         [Required(ErrorMessage ="Please Enter Author Name")]
         public string Author { get; set; }
         [Required(ErrorMessage ="Please Enter Total Page Count")]
+        [Display(Name ="Total Page")]
         public int PageCount { get; set; }
         public string Language { get; set; }
         public string Category { get; set; }
