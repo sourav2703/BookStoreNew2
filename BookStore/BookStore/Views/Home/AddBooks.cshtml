@@ -14,35 +14,41 @@
                         </div>
                 }
             }
-            <form asp-controller="home" asp-action="addbooks" method="post">
-                <div class="addbook_form_div">
-                    <label asp-for="Title"></label>
-                    <input asp-for="Title" placeholder="Enter Title">
-                    <span asp-validation-for="Title" style="color:red" ></span>
-                </div>
+        <form asp-controller="home" asp-action="addbooks" method="post">
+            <div class="addbook_form_div">
+                <label asp-for="Title"></label>
+                <input asp-for="Title" placeholder="Enter Title">
+                <span asp-validation-for="Title" style="color:red"></span>
+            </div>
 
-                <div class="addbook_form_div">
-                    <label asp-for="Author">Author</label>
-                    <input asp-for="Author" placeholder="Enter Author">
-                    <span asp-validation-for="Author" style="color:red"></span>
+            <div class="addbook_form_div">
+                <label asp-for="Author">Author</label>
+                <input asp-for="Author" placeholder="Enter Author">
+                <span asp-validation-for="Author" style="color:red"></span>
 
-                </div>
-                <div class="addbook_form_div">
-                    <label asp-for="Description">Description</label>
-                    <input asp-for="Description" placeholder="Enter Description"  >
-                </div>
-                <div class="addbook_form_div">
-                    <label asp-for="PageCount"></label>
-                    <input asp-for="PageCount" placeholder="Enter PageCount">
-                    <span asp-validation-for="PageCount" style="color:red"></span>
+            </div>
+            <div class="addbook_form_div">
+                <label asp-for="Description">Description</label>
+                <input asp-for="Description" placeholder="Enter Description">
+            </div>
+            <div class="addbook_form_div">
+                <label asp-for="PageCount"></label>
+                <input asp-for="PageCount" placeholder="Enter PageCount">
+                <span asp-validation-for="PageCount" style="color:red"></span>
 
-                </div>
+            </div>
+            <div class="addbook_form_div">
+                <label asp-for="MyField"></label>
+                <input asp-for="MyField" placeholder="Enter PageCount">
+                <span asp-validation-for="MyField" style="color:red"></span>
+
+            </div>
 
 
-                <div class="addbook_form_div" id="submit_btn">
-                    <input type="submit" value="Add Book" />
-                </div>
-            </form>
+            <div class="addbook_form_div" id="submit_btn">
+                <input type="submit" value="Add Book" />
+            </div>
+        </form>
         </div>
     </div>
 

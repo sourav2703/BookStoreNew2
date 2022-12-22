@@ -23,5 +23,7 @@ namespace BookStore.Models
         public int PageCount { get; set; }
         public string Language { get; set; }
         public string Category { get; set; }
+        [DataType(DataType.Date)]
+        public string MyField { get; set; }
     }
 }
