@@ -16,6 +16,7 @@ namespace BookStore.Models
         public int Id { get; set; }
         [Required]
         public string Author { get; set; }
+        [Required]
         public int PageCount { get; set; }
         public string Language { get; set; }
         public string Category { get; set; }
