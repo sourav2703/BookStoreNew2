@@ -25,5 +25,7 @@ namespace BookStore.Models
         public string Category { get; set; }
         [DataType(DataType.Date)]
         public string MyField { get; set; }
+        [Required]
+        public string MyLanguage { get; set; }
     }
 }

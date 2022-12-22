@@ -87,10 +87,14 @@ namespace BookStore.Controllers
         }
         public ViewResult AddBooks( bool IsSuccess = false, int ShowingBookByID=0)
         {
+            var MyLanguage_Passed_Value_From_Controller = new BookModel()
+            {
+                MyLanguage = "English"
+            };
             ViewBag.IsSuccess = IsSuccess;
             ViewBag.ShowingBookByID = ShowingBookByID;
             Title = "AddBooks";
-            return View();
+            return View(MyLanguage_Passed_Value_From_Controller);
         }
         [HttpPost]
         public async Task<IActionResult> AddBooks(BookModel bookModels )

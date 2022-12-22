@@ -43,6 +43,17 @@
                 <span asp-validation-for="MyField" style="color:red"></span>
 
             </div>
+            <div class="addbook_form_div">
+                <label asp-for="MyLanguage"></label>
+                <select asp-for="MyLanguage">
+                    <option value="">Please Select Language</option>
+                    <option>Hindi</option>
+                    <option>English</option>
+                    <option>Sanskrit</option>
+                </select>
+                <span asp-validation-for="MyLanguage" style="color:red"></span>
+
+            </div>
 
 
             <div class="addbook_form_div" id="submit_btn">
